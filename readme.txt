@@ -6,33 +6,33 @@ Requires at least: 3.0
 Tested up to: 3.0
 Stable tag: 1.0
 
-Crie suas listas de modo rápido e prático com o plugin Ilustrated Posts.
+Crie suas listas de modo rÃ¡pido e prÃ¡tico com o plugin Ilustrated Posts.
 
 == Description ==
 
-Através do Widget por ele gerado você poderá configurar diferentes opções para sua lista e reproduzí-la na Sidebar que estiver registrada para seu tema.
+AtravÃ©s do Widget por ele gerado vocÃª poderÃ¡ configurar diferentes opÃ§Ãµes para sua lista e reproduzÃ­-la na Sidebar que estiver registrada para seu tema.
 
 == Installation ==
 
 1. Envie a pasta gm-ilustrated-posts para a pasta de plugins '/wp-content/plugins/'
-1. Ative o plugin *Ilustrated Posts* através do menu 'Plugins' do dashboard
-1. Use a página de Widgets para manusear suas listas
+1. Ative o plugin *Ilustrated Posts* atravÃ©s do menu 'Plugins' do dashboard
+1. Use a pÃ¡gina de Widgets para manusear suas listas
 
 == Frequently Asked Questions ==
 
-= Possui dúvidas? =
+= Possui dÃºvidas? =
 
 Envie-as para http://www.guiawp.com.br/plugins-wordpress/ilustrated-posts/
 
 
 == Screenshots ==
 
-Não disponível
+NÃ£o disponÃ­vel
 
 == Changelog ==
 
 = 1.0 =
-* Primeira versão no repositório de plugins oficiais
+* Primeira versÃ£o no repositÃ³rio de plugins oficiais
 
 == Upgrade Notice ==
 
