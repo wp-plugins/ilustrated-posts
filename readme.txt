@@ -1,39 +1,46 @@
 === Ilustrated Posts ===
-Contributors: Mazetto
-Donate link: http://www.guiawp.com.br
+Author: Mazetto
+Author URI: http://www.guiawp.com.br
 Tags: list, thumb, thumbnail, widget, custom
 Requires at least: 3.0
 Tested up to: 3.0
-Stable tag: 1.0
+Stable tag: 1.5
 
-Crie suas listas de modo rápido e prático com o plugin Ilustrated Posts.
+Manage the 'Ilustrated Posts' Widget to print results in your theme and build different lists easily.
 
 == Description ==
 
-Através do Widget por ele gerado você poderá configurar diferentes opções para sua lista e reproduzí-la na Sidebar que estiver registrada para seu tema.
+Using the created Widget you can configure many options to your list and drag-and-drop it to any sidebar area.
 
 == Installation ==
 
-1. Envie a pasta gm-ilustrated-posts para a pasta de plugins '/wp-content/plugins/'
-1. Ative o plugin *Ilustrated Posts* através do menu 'Plugins' do dashboard
-1. Use a página de Widgets para manusear suas listas
+1. Send the folder 'gm-ilustrated-posts' to '/wp-content/plugins/'
+1. Activate the plugin *Ilustrated Posts* in 'Plugins' menu of Dashboard
+1. Click on Appearence > Widgets to create, edit and use your lists 
 
 == Frequently Asked Questions ==
 
-= Possui dúvidas? =
+= You need more Help? =
 
-Envie-as para http://www.guiawp.com.br/plugins-wordpress/ilustrated-posts/
-
+Read more about in http://www.guiawp.com.br/plugins-wordpress/ilustrated-posts/ (the blog content is in portuguese pt_BR).
 
 == Screenshots ==
 
-Não disponível
+1. Widget Ilustrated Posts `ilustrated-posts-widgets.png`
 
 == Changelog ==
 
+= 1.5 | 07-02-2001 =
+* Always update readme.txt
+* Location included
+* Add wp_dropdown_categories function in the script
+* Field 'category' ordered by name and not receive empty categories, with no post
+
 = 1.0 =
-* Primeira versão no repositório de plugins oficiais
+* First version in oficial plugin repository
 
 == Upgrade Notice ==
 
-* Em breve
+= 1.5 =
+* Universal adaptation with the plugin location
+* Less code resulting in fast processing

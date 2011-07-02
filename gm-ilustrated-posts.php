@@ -2,8 +2,8 @@
 /*
 Plugin Name: Ilustrated Posts
 Plugin URI: http://www.guiawp.com.br/plugins-wordpress/ilustrated-posts/
-Description: Lista de posts com miniaturas
-Version: 1.0
+Description: Posts list's with thumbnails
+Version: 1.5
 Author: Guia WordPress
 Author URI: http://www.guiawp.com.br
 */
@@ -36,11 +36,11 @@ if ( !class_exists( 'gm_ilustrated_posts' ) ) {
 		public static function activate() {
 		
 			$opt = array(
-				'description' => 'Lista de posts e seus thumbnails de acordo com as opções escolhidas'
+				'description' => __( 'Displays a list of posts and their thumbnails according to the chosen options.', 'ilustrated-posts' )
 			);
 
-			wp_register_sidebar_widget( 'wdg_ilustrated', 'Ilustrated Posts', array( 'gm_ilustrated_posts', 'show' ), $opt );
-			wp_register_widget_control( 'wdg_ilustrated', 'Ilustrated Posts', array( 'gm_ilustrated_posts', 'options' ) );
+			wp_register_sidebar_widget( 'wdg_ilustrated', __( 'Ilustrated Posts', 'ilustrated-posts' ), array( 'gm_ilustrated_posts', 'show' ), $opt );
+			wp_register_widget_control( 'wdg_ilustrated', __( 'Ilustrated Posts', 'ilustrated-posts' ), array( 'gm_ilustrated_posts', 'options' ) );
 		
 		}
 		
@@ -72,7 +72,7 @@ if ( !class_exists( 'gm_ilustrated_posts' ) ) {
 				if ( has_post_thumbnail() )
 					$thumb = get_the_post_thumbnail( $post->ID, 'thumbnail' );
 				else
-					$thumb = '<img src="' . plugins_url( '/thumb-not-found.png', __FILE__ ) . '" alt="Imagem não encontrada!" />';
+					$thumb = '<img src="' . plugins_url( '/thumb-not-found.png', __FILE__ ) . '" alt="' . __( 'Image not found!', 'ilustrated-posts' ) . '" />';
 				
 				$link = '<a href="' . get_permalink() . '" title="' . esc_attr( get_the_title() ) . '">';
 				
@@ -100,27 +100,27 @@ if ( !class_exists( 'gm_ilustrated_posts' ) ) {
 			<input type="hidden" name="submit" value="1" />
 			<ul>
 				<li>
-					<label>Título:
+					<label><?php _e( 'Title', 'ilustrated-posts' ); ?>:
 					<input type="text" name="title" maxlength="30" value="<?php echo self::$options[ 'title' ]; ?>" class="widefat" /></label>
 				</li>
 				<li>
-					<label>Quantidade de posts:
+					<label><?php _e( 'Post count', 'ilustrated-posts' ); ?>:
 					<input type="text" name="count" maxlength="2" value="<?php echo self::$options[ 'count' ]; ?>" class="widefat" /></label>
 				</li>
 				<li>
 					<label>
 					<input type="checkbox" value="1" name="excerpt" <?php if ( self::$options[ 'excerpt' ] ) echo 'checked="true" ' ?>/>
-					Exibir resumo dos posts
+					<?php _e( 'Show excerpts', 'ilustrated-posts' ); ?>
 					</label>
 				</li>
 				<li>
-					<label>Ordem:
+					<label><?php _e( 'Order by', 'ilustrated-posts' ); ?>:
 					<select name="order">
 					<?php
 					$params = array( 
-						array( 'value' => 'date', 			'label' => 'Data' ),
-						array( 'value' => 'rand', 			'label' => 'Aleatória' ),
-						array( 'value' => 'comment_count', 	'label' => 'Qtd. Comentários' )
+						array( 'value' => 'date', 			'label' => __( 'Date', 'ilustrated-posts' ) ),
+						array( 'value' => 'rand', 			'label' => __( 'Random', 'ilustrated-posts' ) ),
+						array( 'value' => 'comment_count', 	'label' => __( 'Comment count', 'ilustrated-posts' ) )
 					);
 					
 					foreach ( $params as $param ) {
@@ -136,23 +136,16 @@ if ( !class_exists( 'gm_ilustrated_posts' ) ) {
 					</select></label>
 				</li>
 				<li>
-					<label>Categoria:
-					<select name="category">
+					<label><?php _e( 'Category', 'ilustrated-posts' ); ?>:
 					<?php
-					$cats = gm_framework::get_categories( self::$options[ 'category' ], true );
-					
-					foreach ( $cats as $cat ) {
-					
-						echo '<option value="' . $cat[ 'value' ] . '"';
-						
-						if ( isset( $cat[ 'selected' ] ) )
-							echo ' selected="true"';
-						
-						echo '>' . $cat[ 'label' ] . '</option>';
-					
-					}
+					$args = array(
+						'hide_empty'=> true,
+						'orderby'	=> 'name',
+						'name' 		=> 'category',
+						'selected' 	=> self::$options[ 'category' ]
+					);
+					wp_dropdown_categories( $args );
 					?>
-					</select></label>
 				</li>
 			</ul>
 			
@@ -192,5 +185,5 @@ register_activation_hook( __FILE__, array( 'gm_ilustrated_posts', 'install' ) );
 
 register_deactivation_hook( __FILE__, array( 'gm_ilustrated_posts', 'uninstall' ) );
 
-require 'gm-framework.php';
+load_plugin_textdomain( 'ilustrated-posts', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
 ?>
