@@ -1,7 +1,7 @@
 === Ilustrated Posts ===
 Author: Mazetto
 Author URI: http://www.guiawp.com.br
-Tags: list, thumb, thumbnail, widget, custom
+Tags: images, thumbs, thumbnails, widget, custom, lists
 Requires at least: 3.0
 Tested up to: 3.0
 Stable tag: 1.5
@@ -26,7 +26,7 @@ Read more about in http://www.guiawp.com.br/plugins-wordpress/ilustrated-posts/ 
 
 == Screenshots ==
 
-1. Widget Ilustrated Posts `ilustrated-posts-widgets.png`
+1. Widget Ilustrated Posts 'ilustrated-posts-widgets.png'
 
 == Changelog ==
 
