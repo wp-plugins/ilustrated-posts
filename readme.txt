@@ -26,11 +26,14 @@ Read more about in http://www.guiawp.com.br/plugins-wordpress/ilustrated-posts/ 
 
 == Screenshots ==
 
-1. Widget Ilustrated Posts 'ilustrated-posts-widgets.png'
+1. Widget Ilustrated Posts
 
 == Changelog ==
 
-= 1.5 | 07-02-2001 =
+= 1.5.1 =
+* Screenshots available
+
+= 1.5 =
 * Always update readme.txt
 * Location included
 * Add wp_dropdown_categories function in the script
