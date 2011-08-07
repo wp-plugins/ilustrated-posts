@@ -3,7 +3,7 @@
 Plugin Name: Ilustrated Posts
 Plugin URI: http://www.guiawp.com.br/plugins-wordpress/ilustrated-posts/
 Description: Posts list's with thumbnails
-Version: 1.5
+Version: 1.5.1
 Author: Guia WordPress
 Author URI: http://www.guiawp.com.br
 */
